@@ -12,6 +12,15 @@ import { Component } from '@angular/core';
   <hr>
   <input [(ngModel)]="box" type="text">
   <div [ngClass]="['bdr',box]"></div>
+  <hr>
+  <input [(ngModel)]="agree" type="checkbox">
+  <div [class.bdr]="agree">
+    <h2>Welcome to your life</h2>
+  </div>
+  <hr>
+  <input [(ngModel)]="color" type="text">
+  <h1 [style.background-color]="color">Hello Citibank</h1>
+  <h1 [ngStyle]="{'color':'white','background-color':'blue'}">Hello Citibank</h1>
   `,
   styles : [`
   .bdr{
@@ -40,4 +49,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'step1binding';
   box = 'orangeBox';
+  color = 'pink';
+  agree = true;
 }
