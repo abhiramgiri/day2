@@ -7,12 +7,26 @@ import { Component } from '@angular/core';
     <hr>
     <input [(ngModel)]="agree" type="checkbox">
     <p *ngIf="agree">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium, rerum blanditiis ipsam quae amet, fugiat soluta doloremque quos expedita. Necessitatibus alias provident quisquam iure earum sed eveniet repellat. Iste?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium, rerum blanditiis ipsam quae amet, fugiat soluta doloremque quos expedita. Necessitatibus alias provident quisquam iure earum sed eveniet repellat. Iste?
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam praesentium, rerum blanditiis ipsam quae amet, fugiat soluta doloremque quos expedita. Necessitatibus alias provident quisquam iure earum sed eveniet repellat. Iste?
     </p>
+    <input [(ngModel)]="power" type="range" min="4" max="10" step="1">
+    <h2>Power now is : {{ power }}</h2>
+    <h2> Ironman is now 
+     <span [ngSwitch]="power">
+       <span *ngSwitchCase="5" >Weak</span>
+       <span *ngSwitchCase="6" >Recovering</span>
+       <span *ngSwitchCase="7" >Moderate</span>
+       <span *ngSwitchCase="8" >Strong</span>
+       <span *ngSwitchCase="9" >Strongest</span>
+       <span *ngSwitchCase="10" >Unbeatable</span>
+       <span *ngSwitchDefault >Out of Game</span>
+     </span>
+    </h2>
   `,
 })
 export class KomaliComponent{
-  agree = true
+  agree = true;
+  power = 6;
 }
