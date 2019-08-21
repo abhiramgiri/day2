@@ -1,0 +1,18 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-komli',
+  template: `
+    <p ngNonBindable> {{ komli works! }} </p>
+    <hr>
+    <input [(ngModel)]="agree" type="checkbox">
+    <p *ngIf="agree">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quas quos corporis odit, aspernatur tenetur et officia ea, a, nam fuga sequi fugit. Nisi consequuntur aliquam amet doloremque magnam modi!
+    </p>
+  `,
+})
+export class KomaliComponent{
+  agree = true
+}
